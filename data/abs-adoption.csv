@@ -1,0 +1,14 @@
+group,year,share_pct,source,fact_id
+Large,2021-22,9,"ABS (2026)",F32
+Large,2024-25,35,"ABS (2026)",F32
+Medium,2021-22,3,"ABS (2026)",F33
+Medium,2024-25,22,"ABS (2026)",F33
+Small and micro,2024-25,11,"ABS (2026)",F34
+Micro: innovation-active,2024-25,18,"ABS (2026)",F35
+Small: innovation-active,2024-25,19,"ABS (2026)",F35
+Medium: innovation-active,2024-25,28,"ABS (2026)",F35
+Large: innovation-active,2024-25,37,"ABS (2026)",F35
+Micro: not innovation-active,2024-25,6,"ABS (2026)",F35
+Small: not innovation-active,2024-25,4,"ABS (2026)",F35
+Medium: not innovation-active,2024-25,13,"ABS (2026)",F35
+Large: not innovation-active,2024-25,29,"ABS (2026)",F35

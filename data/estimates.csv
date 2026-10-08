@@ -1,0 +1,6 @@
+label,low_pp,high_pp,measure,source,fact_id,note
+Acemoglu ceiling,0,0.066,TFP,"Acemoglu (2025)",F1,"0.66% over 10 years, annualised: 1.0066^0.1 - 1"
+PC: range of studies,0.05,1.3,MFP,"Productivity Commission (2025) Box 1.1",F19,"0.5% to 13% over the decade"
+PC central (MFP),0.23,0.23,MFP,"Productivity Commission (2025) Box 1.1",F20,"MFP gains above 2.3% over the decade"
+PC central (labour),0.42,0.42,Labour productivity,"Productivity Commission (2025) Box 1.1",F21,"about 4.3% over the decade, annualised: 1.043^0.1 - 1"
+CommBank estimate,0.8,1.0,Labour productivity,"Yeaman (2026)",F51,"economies which integrate AI deeply and widely"

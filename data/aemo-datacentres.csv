@@ -1,0 +1,4 @@
+year,central_twh,high_twh,source,fact_id,note
+2026,5,5,"Dux (2026), reporting AEMO 2026 ESOO",F37,"approximately 5TWh a year, around 3% of NEM consumption"
+2030,15,,"Dux (2026), reporting AEMO 2026 ESOO",F38,"2029-30: around 15TWh, 7.8% of NEM operational consumption"
+2036,34,52,"Dux (2026), reporting AEMO 2026 ESOO",F39,"2035-36: around 34TWh (13%) central; around 52TWh high growth sensitivity"
