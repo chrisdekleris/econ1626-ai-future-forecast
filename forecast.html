@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Long Tail Decides</title>
+  <title>How much will AI lift Australia's productivity by 2030?</title>
   <meta name="description" content="An interactive forecast of Australia's AI productivity dividend to 2030: why small-firm diffusion matters more than owning the models.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +18,8 @@
 <body>
 
 <header class="hero">
-  <h1>The long tail decides</h1>
-  <p class="dek">Australia's AI dividend to 2030 depends less on who builds the models than on how fast small firms start using them.</p>
+  <h1>How much will AI lift Australia's productivity by 2030?</h1>
+  <p class="dek">A forecast of what artificial intelligence could add to Australian productivity by 2030, and why the answer depends mostly on how quickly small businesses adopt it.</p>
 
   <div class="tail" role="img" aria-label="Share of Australian businesses using AI in 2024–25: large 35 per cent, medium 22 per cent, small and micro 11 per cent.">
     <div class="tail-row" data-pct="35"><span class="label">Large businesses</span><div class="dots"></div><span class="pct">35%</span></div>
@@ -31,6 +31,24 @@
 </header>
 
 <main>
+
+<!-- ===================== LANDING ===================== -->
+<section class="col" id="landing">
+  <h2>The range of estimates</h2>
+  <p>How much will artificial intelligence add to Australia's productivity growth? The studies reviewed by the Productivity Commission (PC) range from 0.05 to 1.3 percentage points a year <span class="cite">(Productivity Commission 2025)</span>. The Commission's own central case is 0.23 points <span class="cite">(Productivity Commission 2025)</span>. CommBank's chief economist puts economies that adopt AI "deeply and widely" at 0.8 to 1.0 points <span class="cite">(Yeaman 2026)</span>. At the bottom, Acemoglu's <span class="cite">(2025)</span> ceiling of 0.66 per cent over a decade works out to under 0.07 points a year.</p>
+</section>
+
+<figure class="wide" id="fig-estimates">
+  <div class="fig-head"><h4>Every estimate on one line</h4><p>Hover or tap a bar for its source and method. Colours show what is being measured.</p></div>
+  <div class="chart-box short"><canvas id="chart-estimates" aria-label="Range of AI productivity estimates, from under 0.07 to 1.3 percentage points a year"></canvas></div>
+  <figcaption>Grey: total factor productivity. Green: multifactor productivity. Gold: labour productivity. Sources: Acemoglu (2025); Productivity Commission (2025); Yeaman (2026). Data: <a href="data/estimates.csv">estimates.csv</a>.</figcaption>
+</figure>
+
+<section class="col">
+  <p>The highest estimate is more than twenty times the lowest. Most of that gap probably comes down to diffusion, meaning how quickly ordinary firms change the way they work to use AI.</p>
+  <p class="thesis">Australia's productivity gain from AI by 2030 will depend mostly on how quickly its small firms adopt it. Owning the models or the data centres probably matters less than current policy assumes. Building AI locally is worthwhile when it removes a real barrier to adoption, and Maincode, a Melbourne AI developer, appears to be moving in that direction.</p>
+  <p>The forecast runs to 2030 because that is the year Jobs and Skills Australia's <span class="cite">(2025)</span> fastest adoption pathway reaches 50 per cent. That is long enough for adoption to show up in productivity data, and soon enough to check the forecast against what happens.</p>
+</section>
 
 </main>
 </body>
