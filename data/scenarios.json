@@ -1,0 +1,32 @@
+{
+  "_about": "Parameters for the diffusion simulator (js/simulator.js). Small-firm adoption follows a logistic S-curve starting at 11% in 2025 (ABS 2026, F34) and reaching 50% in year t50. The productivity level gain at time t is task_gain x exposed_share x adoption(t), the Hulten logic in Acemoglu (2025, F4). exposed_share is calibrated once so the baseline reproduces the PC's central 4.3% labour productivity gain over 2025-2035 (F21). See docs/methods.md.",
+  "start_year": 2025,
+  "start_adoption": 0.11,
+  "exposed_share": 0.489,
+  "scenarios": {
+    "baseline": {
+      "name": "Current policy",
+      "t50": 2033,
+      "t50_source": "JSA (2025) scenario 1: 50% adoption by 2033 (F41)",
+      "task_gain": 0.14,
+      "task_gain_source": "Brynjolfsson, Li & Raymond (2025): 14% average gain (F8)",
+      "calculator_uplift_pp": 0.42
+    },
+    "upside": {
+      "name": "Adoption-focused policy",
+      "t50": 2030,
+      "t50_source": "JSA (2025) scenario 3: augmentation reaches 50% by 2030 (F42)",
+      "task_gain": 0.20,
+      "task_gain_source": "Assumption: deeper reorganisation lifts the average gain towards the 34% seen for novices (F8). Output lands inside CommBank's 0.8-1.0pp range (F51)",
+      "calculator_uplift_pp": 0.84
+    },
+    "downside": {
+      "name": "Infrastructure first",
+      "t50": 2038,
+      "t50_source": "Assumption: a five-year lag on JSA scenario 1, by analogy with JSA's non-market lag (F43)",
+      "task_gain": 0.07,
+      "task_gain_source": "Assumption: bolt-on adoption without reorganisation halves the gain (GPT prediction, Berg Week 1; J-curve, F5). Output lands near the bottom of the PC's study range (F19)",
+      "calculator_uplift_pp": 0.13
+    }
+  }
+}

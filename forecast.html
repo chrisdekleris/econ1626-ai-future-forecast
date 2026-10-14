@@ -124,6 +124,59 @@
   <p>Lemphers' own recent decisions support a narrower version of the maker case. Maincode's new Melbourne facility is built around "advanced, focused models that actually work", aimed at rule-heavy tasks where "anyone who's spent time trying to prompt-engineer a general-purpose model… knows the limits" <span class="cite">(iTWire 2025)</span>. He has also dropped the "sovereign AI" label as "very divisive" <span class="cite">(Williams 2025)</span>. Specialised models that follow a bank's compliance rules or a hospital's protocols make AI cheaper to use where general models struggle, and if they reach smaller firms they would lower adoption costs where Australia lags most. Building AI in Australia is most likely to be worthwhile when it makes AI cheaper or easier for Australian firms to use.</p>
 </section>
 
+<!-- ===================== SCENARIOS ===================== -->
+<section class="col" id="scenarios">
+  <h2>Scenarios to 2030</h2>
+  <p>Three scenarios follow, each defined by its policy settings and measured on the same rows in the table below. All gains are in labour productivity. The PC's central case of 2.3 per cent multifactor productivity converts to about 4.3 per cent labour productivity over the decade <span class="cite">(Productivity Commission 2025)</span>, roughly 0.42 points a year.</p>
+</section>
+
+<figure class="wide" id="fig-table">
+  <div class="table-wrap">
+    <table>
+      <caption class="sr-only">Three scenarios to 2030 compared on the same rows</caption>
+      <thead>
+        <tr><th scope="col"></th><th scope="col" class="base">Baseline: current policy</th><th scope="col" class="up">Upside: adoption-focused policy</th><th scope="col" class="down">Downside: infrastructure first</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Policy settings</th><td>National AI Plan unchanged</td><td>Programmes to help small firms adopt AI and build skills; public money for local AI builders only where it lowers adoption costs</td><td>Public money for Australian-owned data centres and models; grid costs spread across households</td></tr>
+        <tr><th scope="row">Small firms using AI, 2030</th><td>About 31%</td><td>About 50%</td><td>About 22%</td></tr>
+        <tr><th scope="row">AI uplift, pp a year</th><td>0.42</td><td>0.84</td><td>0.13</td></tr>
+        <tr><th scope="row">Jobs and tasks</th><td>Tasks reorganise; little aggregate effect</td><td>New tasks keep pace with displaced ones</td><td>Clerical jobs lost before new tasks appear</td></tr>
+        <tr><th scope="row">Industry structure</th><td>Large firms pull ahead</td><td>Gap narrows</td><td>Gap widens; risk of a data-centre boom and bust</td></tr>
+        <tr><th scope="row">Distribution</th><td>Capital share edges up</td><td>Gains for less experienced workers spread widely</td><td>Women and households pay most</td></tr>
+        <tr><th scope="row">What to watch in 2027</th><td>Ruled out if small-firm adoption passes 25%</td><td>Ruled out if small-firm adoption stays below 20%</td><td>Under way if data-centre demand runs ahead of AEMO's forecast while small-firm adoption stalls</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figcaption>2030 adoption and uplift come from the simulator below. Sources for each setting: <a href="data/scenarios.json">scenarios.json</a>.</figcaption>
+</figure>
+
+<section class="col">
+  <p><strong>Baseline: current policy.</strong> The National AI Plan continues unchanged, with its heavy emphasis on infrastructure and data centres <span class="cite">(Department of Industry, Science and Resources 2025)</span>. Small-firm adoption reaches 50 per cent by 2033, following JSA's steady pathway <span class="cite">(Jobs and Skills Australia 2025)</span>. AI adds about 0.42 points a year, enough to support Treasury's assumption of 1.2 per cent productivity growth <span class="cite">(Treasury 2026)</span> but not exceed it, and large firms pull further ahead. <em>What to watch:</em> small-firm adoption above 25 per cent in 2026–27 would mean adoption is faster than assumed.</p>
+  <p><strong>Upside: adoption-focused policy.</strong> Government helps small firms adopt AI and build skills, and funds Australian AI builders only where they lower adoption costs. Adoption reaches 50 per cent by 2030, following JSA's faster pathway in which AI mainly assists workers <span class="cite">(Jobs and Skills Australia 2025)</span>. The gain approaches CommBank's 0.8 to 1.0 points a year <span class="cite">(Yeaman 2026)</span>, and new tasks appear as fast as old ones disappear. <em>What to watch:</em> small-firm adoption below 20 per cent in 2027 would rule this scenario out.</p>
+  <p><strong>Downside: infrastructure first.</strong> Public money goes into Australian-owned data centres and models, extra grid costs are spread across households, and small firms get no targeted help. Adoption is delayed by about five years, the lag JSA models for non-market sectors <span class="cite">(Jobs and Skills Australia 2025)</span>, and the gain falls to about 0.13 points a year, near the bottom of the PC's range. Clerical jobs disappear before new tasks emerge, hitting women hardest. <em>What to watch:</em> data-centre demand running ahead of AEMO's forecast while small-firm adoption stalls.</p>
+</section>
+
+<figure class="wide" id="fig-sim">
+  <div class="fig-head"><h4>Adoption simulator</h4><p>Pick a scenario, or move the sliders to see how adoption speed and depth change the productivity gain.</p></div>
+  <div class="controls">
+    <div class="seg" id="sim-scenarios" role="group" aria-label="Choose a scenario">
+      <button type="button" data-s="baseline" aria-pressed="true">Baseline</button>
+      <button type="button" data-s="upside" aria-pressed="false">Upside</button>
+      <button type="button" data-s="downside" aria-pressed="false">Downside</button>
+    </div>
+    <div class="slider"><label for="s-t50">Year half of small firms use AI: <output id="o-t50">2033</output></label><input id="s-t50" type="range" min="2028" max="2042" step="1" value="2033"></div>
+    <div class="slider"><label for="s-gain">Average gain on affected tasks: <output id="o-gain">14%</output></label><input id="s-gain" type="range" min="3" max="40" step="1" value="14"></div>
+  </div>
+  <div class="chart-box"><canvas id="chart-sim" aria-label="Small-firm AI adoption and productivity level gain, 2025 to 2035"></canvas></div>
+  <div class="readout" aria-live="polite">
+    <div>Small firms using AI in 2030<b id="r-2030">–</b></div>
+    <div>Productivity level gain by 2035<b id="r-level">–</b></div>
+    <div>Average uplift a year, 2025–35<b id="r-uplift">–</b></div>
+  </div>
+  <figcaption>Adoption starts at 11% in 2025 (ABS 2026) and follows an S-curve. Gain = task gain × share of work exposed × adoption (Acemoglu 2025). The exposure share is calibrated so the baseline matches the PC's 4.3% (see <a href="docs/methods.md">methods</a>).</figcaption>
+</figure>
+
 </main>
 </body>
 </html>
