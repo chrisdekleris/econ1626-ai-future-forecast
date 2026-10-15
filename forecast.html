@@ -177,6 +177,31 @@
   <figcaption>Adoption starts at 11% in 2025 (ABS 2026) and follows an S-curve. Gain = task gain × share of work exposed × adoption (Acemoglu 2025). The exposure share is calibrated so the baseline matches the PC's 4.3% (see <a href="docs/methods.md">methods</a>).</figcaption>
 </figure>
 
+<!-- ===================== CALCULATOR ===================== -->
+<section class="col">
+  <p>Berg's Week 3 exercise asked what an extra 0.5 points of growth a year does over 20 years, and the answer is about 10.5 per cent higher GDP per person. Compared with no AI, the simulator's baseline leaves Australians about 8.7 per cent better off by 2045, the upside 18.2 per cent and the downside 2.6 per cent. The PC's central estimate is worth about $116 billion of extra GDP over a decade <span class="cite">(Productivity Commission 2025)</span>.</p>
+</section>
+
+<figure class="wide" id="fig-calc">
+  <div class="fig-head"><h4>GDP per person under each scenario</h4><p>GDP per person against a world without AI. Drag the slider to test your own number.</p></div>
+  <div class="controls">
+    <div class="slider"><label for="s-uplift">Your AI uplift, pp a year: <output id="o-uplift">0.50 pp</output></label><input id="s-uplift" type="range" min="0" max="1.5" step="0.01" value="0.5"></div>
+  </div>
+  <div class="chart-box"><canvas id="chart-calc" aria-label="GDP per person indexed to 2025, by scenario, to 2045"></canvas></div>
+  <div class="readout" aria-live="polite"><div>Your setting: GDP per person in 2045, above no-AI<b id="r-2045">–</b></div></div>
+  <figcaption>Index: 2025 = 100. Assumes GDP per person grows with labour productivity. Modelled on Berg's (2025) growth projection tool.</figcaption>
+</figure>
+
+<figure class="wide" id="fig-power">
+  <div class="fig-head"><h4>Data-centre electricity demand</h4><p>Data centres take two to three years to build. New generation takes six to ten or more.</p></div>
+  <div class="chart-box"><canvas id="chart-power" aria-label="Forecast Australian data-centre electricity use, 2026 to 2035–36"></canvas></div>
+  <figcaption>Points are AEMO forecasts (2026 ESOO, reported by Dux 2026); lines join them. Lead times: Berg (2026). Data: <a href="data/aemo-datacentres.csv">aemo-datacentres.csv</a>.</figcaption>
+</figure>
+
+<section class="col">
+  <p>Building data centres ahead of adoption has a cost on the grid. AEMO's high case reaches about 52 terawatt hours by 2035–36, against 34 in the central case <span class="cite">(Dux 2026)</span>. Data centres take two to three years to build, while new generation takes about six years for a gas turbine and ten or more for nuclear <span class="cite">(Berg 2026)</span>. Data-centre demand would therefore arrive years before new supply, and years before small-firm adoption raises productivity.</p>
+</section>
+
 </main>
 </body>
 </html>
